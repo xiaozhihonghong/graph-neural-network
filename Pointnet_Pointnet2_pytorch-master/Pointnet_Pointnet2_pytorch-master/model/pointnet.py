@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.nn.parallel
+import torch.nn.parallel  # 并行计算
 import torch.utils.data
 from torch.autograd import Variable
 import numpy as np
@@ -217,7 +217,7 @@ class PointNetDenseCls(nn.Module):
         net2 = self.convs4(net2)
         net2 = net2.transpose(2, 1).contiguous()
         net2 = F.log_softmax(net2.view(-1, self.part_num), dim=-1)
-        net2 = net2.view(batchsize, n_pts, self.part_num) # [B, N 50]
+        net2 = net2.view(batchsize, n_pts, self.part_num)  # [B, N 50]
 
         return net, net2, trans_feat
 

@@ -7,7 +7,6 @@
 @Time: 2018/10/13 10:39 PM
 """
 
-
 from __future__ import print_function
 import os
 import argparse
@@ -23,6 +22,7 @@ from torch.utils.data import DataLoader
 from util import cal_loss, IOStream
 import sklearn.metrics as metrics
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 def _init_():
     if not os.path.exists('checkpoints'):
@@ -53,8 +53,8 @@ def train(args, io):
         raise Exception("Not implemented")
     print(str(model))
 
-    model = nn.DataParallel(model)
-    print("Let's use", torch.cuda.device_count(), "GPUs!")
+    # model = nn.DataParallel(model)
+    # print("Let's use", torch.cuda.device_count(), "GPUs!")
 
     if args.use_sgd:
         print("Use SGD")
@@ -94,12 +94,11 @@ def train(args, io):
             train_pred.append(preds.detach().cpu().numpy())
         train_true = np.concatenate(train_true)
         train_pred = np.concatenate(train_pred)
-        outstr = 'Train %d, loss: %.6f, train acc: %.6f, train avg acc: %.6f' % (epoch,
-                                                                                 train_loss*1.0/count,
-                                                                                 metrics.accuracy_score(
-                                                                                     train_true, train_pred),
-                                                                                 metrics.balanced_accuracy_score(
-                                                                                     train_true, train_pred))
+        outstr = 'Train %d, loss: %.6f, train acc: %.6f' % (epoch,
+                                                            train_loss*1.0/count,
+                                                            metrics.accuracy_score(
+                                                            train_true, train_pred),
+                                                            )
         io.cprint(outstr)
 
         ####################
@@ -124,11 +123,11 @@ def train(args, io):
         test_true = np.concatenate(test_true)
         test_pred = np.concatenate(test_pred)
         test_acc = metrics.accuracy_score(test_true, test_pred)
-        avg_per_class_acc = metrics.balanced_accuracy_score(test_true, test_pred)
-        outstr = 'Test %d, loss: %.6f, test acc: %.6f, test avg acc: %.6f' % (epoch,
-                                                                              test_loss*1.0/count,
-                                                                              test_acc,
-                                                                              avg_per_class_acc)
+        # avg_per_class_acc = metrics.balanced_accuracy_score(test_true, test_pred)
+        outstr = 'Test %d, loss: %.6f, test acc: %.6f' % (epoch,
+                                                          test_loss*1.0/count,
+                                                          test_acc,
+                                                          )
         io.cprint(outstr)
         if test_acc >= best_test_acc:
             best_test_acc = test_acc
@@ -162,8 +161,8 @@ def test(args, io):
     test_true = np.concatenate(test_true)
     test_pred = np.concatenate(test_pred)
     test_acc = metrics.accuracy_score(test_true, test_pred)
-    avg_per_class_acc = metrics.balanced_accuracy_score(test_true, test_pred)
-    outstr = 'Test :: test acc: %.6f, test avg acc: %.6f'%(test_acc, avg_per_class_acc)
+    # avg_per_class_acc = metrics.balanced_accuracy_score(test_true, test_pred)
+    outstr = 'Test :: test acc: %.6f, test avg acc: %.6f' % (test_acc)
     io.cprint(outstr)
 
 

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b2d4e73-900a-460d-9e1d-577fcdf0782c" name="Default Changelist" comment="" />
+    <list default="true" id="3b2d4e73-900a-460d-9e1d-577fcdf0782c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/.idea/Pointnet_Pointnet2_pytorch-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/.idea/Pointnet_Pointnet2_pytorch-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/tensorboardX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../tensorboardX/tensorboardX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/data_utils/ModelNetDataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/data_utils/ModelNetDataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/model/pointnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/model/pointnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/train_clf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pointnet_Pointnet2_pytorch-master/Pointnet_Pointnet2_pytorch-master/train_clf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +30,7 @@
   <component name="ProjectId" id="1RAmFYZ43iZaPwVsPXbodflKf0E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -71,7 +88,8 @@
       <updated>1569118171167</updated>
       <workItem from="1569118194492" duration="1335000" />
       <workItem from="1569155559184" duration="1808000" />
-      <workItem from="1569221117604" duration="2121000" />
+      <workItem from="1569221117604" duration="2763000" />
+      <workItem from="1569636289963" duration="2837000" />
     </task>
     <servers />
   </component>
@@ -83,7 +101,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
